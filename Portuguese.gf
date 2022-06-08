@@ -11,8 +11,8 @@ concrete Portuguese of Sem = open Oper in {
     Command, Object, Integer, Value = EXPR ;
 
   lin
-		Pop integer = {s = "extrair" ++ "elemento" | "item" | "valor" ++ "na posição" ++ integer.s ++ "de uma lista"} ;
-		Count value = {s = "contar as ocorrências de um" ++ value.s ++ "numa lista"} ;
+		Pop integer = {s = "extrair" ++ variants {"elemento" ; "item" ; "valor"} ++ "na posição" ++ integer.s ++ "de uma lista"} ;
+		Count value = {s = variants {"contar" ; "determinar" ; "calcular"} ++ variants { "as" ; "o número de"} ++ "ocorrências de um" ++ value.s ++ "numa lista"} ;
 		Index value = {s = "determinar o índice de um" ++ value.s ++ "numa lista"} ;
 		Remove value = {s = "remover um" ++ value.s ++ "de uma lista"} ;
 		Insert integer object = {s = "inserir um" ++ object.s ++ "em uma lista na posição" ++ integer.s} ;
@@ -28,8 +28,8 @@ concrete Portuguese of Sem = open Oper in {
 		Neg3 = {s = "-3" | "menos 3" | "menos três"} ;
 		Val = {s = "valor" | "elemento" | "item"} ;
 		Obj = {s = "objeto"} ;
-    Print object = {s = "print(" ++ object.s ++ ")"} ;
-		Length object = {s = "len(" ++ object.s ++ ")"} ;
+    Print object = {s = variants {"imprimir" ; "exibir"} ++ "um" ++ object.s ++ ")"} ;
+		Length object = {s = variants { "determinar" ; "calcular"} ++ variants { "o comprimento" ; "a extensão"} ++ "de um" ++ object.s} ;
 		mkObjInt integer = {s = integer.s} ;
 		mkObjVal value = {s = value.s} ;
 }

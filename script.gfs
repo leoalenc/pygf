@@ -1,0 +1,12 @@
+import Portuguese.gf
+import Python.gf
+
+p -cat=Command -lang=Portuguese "contar as ocorrências de um valor numa lista"
+p -cat=Command -lang=Portuguese "contar as ocorrências de um valor numa lista" | l -lang=Python
+p -cat=Command -lang=Portuguese "contar as ocorrências de um item numa lista" | l -lang=Python
+p -cat=Command -lang=Portuguese "contar as ocorrências de um elemento numa lista" | l -lang=Python
+-- of the following two Portuguese examples, only the second one is parsed,
+-- because the Portuguese grammar is too rudimentary, not allowing for word order variantions
+p -cat=Command -lang=Portuguese "inserir um objeto na posição 2 de uma lista" | l -lang=Python
+p -cat=Command -lang=Portuguese "inserir um objeto em uma lista na posição 2" | l -lang=Python
+gr -number=100 | l -treebank | write_file -file=treebank.txt
