@@ -11,11 +11,11 @@ concrete Portuguese of Sem = open Oper in {
     Command, Object, Integer, Value = EXPR ;
 
   lin
-		Pop integer = {s = "extrair" ++ variants {"elemento" ; "item" ; "valor"} ++ "na posição" ++ integer.s ++ "de uma lista"} ;
-		Count value = {s = variants {"contar" ; "determinar" ; "calcular"} ++ variants { "as" ; "o número de"} ++ "ocorrências de um" ++ value.s ++ "numa lista"} ;
-		Index value = {s = "determinar o índice de um" ++ value.s ++ "numa lista"} ;
-		Remove value = {s = "remover um" ++ value.s ++ "de uma lista"} ;
-		Insert integer object = {s = "inserir um" ++ object.s ++ "em uma lista na posição" ++ integer.s} ;
+		Pop integer = {s = "extrair" ++ variants {"elemento" ; "item" ; "valor"} ++ "na posição" ++ integer.s ++ variants {"de uma" ; "duma"} ++ "lista"} ;
+		Count value = {s = variants {"contar" ; "determinar" ; "calcular"} ++ variants { "as" ; "o número de"} ++ "ocorrências de um" ++ value.s ++ variants {"numa" ; "em uma"} ++ "lista"} ;
+		Index value = {s = "determinar o índice de um" ++ value.s ++ variants {"numa" ; "em uma"} ++ "lista"} ;
+		Remove value = {s = "remover um" ++ value.s ++ variants {"de uma" ; "duma"} ++ "lista"} ;
+		Insert integer object = {s = "inserir um" ++ object.s ++ variants {"numa" ; "em uma"} ++ "lista na posição" ++ integer.s} ;
 		Reverse = {s = "inverter uma lista"} ;
 		Clear = {s = "limpar uma lista"} ;
 		Sort = {s = "ordenar uma lista"} ;
@@ -29,7 +29,7 @@ concrete Portuguese of Sem = open Oper in {
 		Val = {s = "valor" | "elemento" | "item"} ;
 		Obj = {s = "objeto"} ;
     Print object = {s = variants {"imprimir" ; "exibir"} ++ "um" ++ object.s ++ ")"} ;
-		Length object = {s = variants { "determinar" ; "calcular"} ++ variants { "o comprimento" ; "a extensão"} ++ "de um" ++ object.s} ;
+		Length object = {s = variants { "determinar" ; "calcular"} ++ variants { "o comprimento" ; "a extensão"} ++ variants {"de um" ; "dum"} ++ object.s} ;
 		mkObjInt integer = {s = integer.s} ;
 		mkObjVal value = {s = value.s} ;
 }
